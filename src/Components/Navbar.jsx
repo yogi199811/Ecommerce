@@ -12,9 +12,16 @@ const Navbar = () => {
   return (
     <div
       style={{ fontFamily: "gilroy" }}
-      className="  px-28  text-white font-bold font-serif hover:underline  uppercase text-xl w-full flex items-center justify-evenly max-h-20 bg-black"
+      className="  py-5 px-28  text-white font-bold font-serif hover:underline  uppercase text-xl w-full flex items-center justify-evenly max-h-28 bg-black"
     >
-      <h1 className={`${style.one}`}>home</h1>
+      <h1>
+        <NavLink
+          className={({ isActive }) => (isActive ? " text-red-600" : undefined)}
+          to={"/"}
+        >
+          home
+        </NavLink>
+      </h1>
       <h1>
         <NavLink
           className={({ isActive }) => (isActive ? " text-red-600" : undefined)}
@@ -24,7 +31,14 @@ const Navbar = () => {
           about
         </NavLink>
       </h1>
-      <h1>contact</h1>
+      <h1>
+        <NavLink
+          className={({ isActive }) => (isActive ? " text-red-600" : undefined)}
+          to={"/contact"}
+        >
+          contact
+        </NavLink>
+      </h1>
 
       <button onClick={clickHandle}>❌</button>
     </div>

@@ -6,27 +6,19 @@ const CartProvider = ({ children }) => {
   const [value, setValue] = useState([
     {
       title: "Colors",
-
       price: 100,
-
       imageUrl:
         "https://prasadyash2411.github.io/ecom-website/img/Album%201.png",
-
       quantity: 2,
-
       id: Math.random().toLocaleString(),
     },
 
     {
       title: "Black and white Colors",
-
       price: 50,
-
       imageUrl:
         "https://prasadyash2411.github.io/ecom-website/img/Album%202.png",
-
       quantity: 3,
-
       id: Math.random().toLocaleString(),
     },
 
@@ -44,12 +36,18 @@ const CartProvider = ({ children }) => {
     },
   ]);
 
+  const add = (id) => {
+    value.filter((item) => item.id === id);
+  };
+
   const remove = (id) => {
     setValue(value.filter((item) => item.id !== id));
   };
 
   return (
-    <cartContext.Provider value={{ open, setOpen, remove, value, setValue }}>
+    <cartContext.Provider
+      value={{ open, setOpen, remove, value, setValue, add }}
+    >
       {children}
     </cartContext.Provider>
   );
