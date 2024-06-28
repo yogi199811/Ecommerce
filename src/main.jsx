@@ -9,12 +9,17 @@ import {
   Route,
   createBrowserRouter,
 } from "react-router-dom";
+
+//  install above 4 pacakage and make routing
+
+
 import About from "./Components/About/About.jsx";
 
 const routerElements = createRoutesFromElements(
   <Route>
     <Route path="/" element={<App />} />
     <Route path="/about" element={<About />} />
+    <Route path="/contact" element={<About />} />
   </Route>
 );
 
