@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import style from "./Navbar.module.css";
 import cartContext from "../context/cartContext";
 import { NavLink } from "react-router-dom";
 
@@ -37,6 +36,17 @@ const Navbar = () => {
           to={"/contact"}
         >
           contact
+        </NavLink>
+      </h1>
+
+
+
+      <h1>
+        <NavLink
+          className={({ isActive }) => (isActive ? " text-red-600" : undefined)}
+          to={"/help"}
+        >
+          help
         </NavLink>
       </h1>
 

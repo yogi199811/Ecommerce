@@ -96,9 +96,9 @@ const About = () => {
             </div>
             <div className="w-1/3 md:w-1/4 mb-6 text-center">
               <img 
-                src="https://via.placeholder.com/150" 
+                src="https://images.unsplash.com/photo-1513152697235-fe74c283646a?q=80&w=1896&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
                 alt="Team member" 
-                className="rounded-full shadow-lg mb-4"
+                className="rounded-full h-36 object-cover w-36 shadow-lg mb-4"
               />
               <h3 className="text-xl font-semibold text-gray-800">Emily Davis</h3>
               <p className="text-gray-600">Lead Developer</p>

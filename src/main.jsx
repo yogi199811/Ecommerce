@@ -12,6 +12,7 @@ import {
   createBrowserRouter,
 } from "react-router-dom";
 import Home from "./Components/Home/Home.jsx";
+import Help from "./Components/Help/Help.jsx";
 
 //  install above 4 pacakage and make routing
 
@@ -31,6 +32,7 @@ const router = createBrowserRouter(
 
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/help" element={<Help />} />
     </Route>
   )
 );
