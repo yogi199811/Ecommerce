@@ -12,7 +12,8 @@ import {
   createBrowserRouter,
 } from "react-router-dom";
 import Home from "./Components/Home/Home.jsx";
-import Help from "./Components/Help/Help.jsx";
+import Review from "./Components/Review/Review.jsx";
+import Signup from "./Components/Signup/Signup.jsx";
 
 //  install above 4 pacakage and make routing
 
@@ -32,7 +33,8 @@ const router = createBrowserRouter(
 
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/help" element={<Help />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/review/:reviweid" element={<Review />} />
     </Route>
   )
 );

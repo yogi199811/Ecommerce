@@ -12,29 +12,34 @@ const Contact = () => {
   const submitHandle = async (e) => {
     e.preventDefault();
 
-    const review = {
-      name: nameref.current.value,
-      email: emailref.current.value,
-      text: textref.current.value,
-    };
-    const response = await fetch(
-      "https://ecommerce-7ab8d-default-rtdb.asia-southeast1.firebasedatabase.app/review.json",
-      {
-        method: "POST",
-        body: JSON.stringify(review),
-        headers: {
-          "Content-Type": "aplication/json",
-        },
-      }
-    );
-    const data = await response.json();
-    setName(data)
-    console.log(data);
-
-    
-     nameref.current.value = ""
-     emailref.current.value = ""
-     textref.current.value = ""
+    try {
+      const review = {
+        name: nameref.current.value,
+        email: emailref.current.value,
+        text: textref.current.value,
+      };
+      const response = await fetch(
+        "https://ecommerce-7ab8d-default-rtdb.asia-southeast1.firebasedatabase.app/review.json",
+        {
+          method: "POST",
+          body: JSON.stringify(review),
+          headers: {
+            "Content-Type": "aplication/json",
+          },
+        }
+      );
+      const data = await response.json();
+      setName(data)
+      console.log(data);
+  
+      
+       nameref.current.value = ""
+       emailref.current.value = ""
+       textref.current.value = ""
+    } catch (error) {
+      console.log(error.message);
+      
+    }
   };
   return (
     <div className="bg-gray-100 py-10  text-white">

@@ -44,9 +44,9 @@ const Navbar = () => {
       <h1>
         <NavLink
           className={({ isActive }) => (isActive ? " text-red-600" : undefined)}
-          to={"/help"}
+          to={"/signup"}
         >
-          help
+          Signup
         </NavLink>
       </h1>
 
